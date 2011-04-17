@@ -56,7 +56,7 @@
                 - else
                   %span.action.disabled
                     = image('redo_disabled') + ' ' + t('refresh_calendar')
-                = link_to image('delta') + ' ' + t('edit_calendar'), edit_admin_calendar_path(calendar), :class => 'action'
+                = link_to t('edit_calendar'), edit_admin_calendar_path(calendar), :class => 'action'
                 = link_to image('minus') + ' ' + t('delete_calendar'), admin_calendar_path(calendar), :confirm => t('really_delete_calendar', :name => calendar.name), :method => :delete, :class => 'action'
               
 
