@@ -1,0 +1,213 @@
+---
+nl:
+  time:
+    formats:
+      calendar_period_description_week: "in week %U of %Y"
+      calendar_period_description_month: "in %B %Y"
+      calendar_period_description_year: "in %Y"
+      calendar_period_describe: "%d %B"
+      calendar_period_describe_with_year: "%d %B %Y"
+      calendar_period_describe_detailed: "%I:%M%p %d/%m/%Y"
+      calendar_period_minicalendar_title: "%B %Y"
+      calendar_period_minicalendar_month: "%B"
+      calendar_month: "%B"
+      calendar_short_month: "%b"
+      calendar_day_name: "%A"
+      calendar_day_of_month: "%d"
+      event_calendar_time_format: "%I:%M%p"
+      event_calendar_round_time_format: "%I%p"
+  date:
+    formats:
+      event_calendar_date_format: "%d %B"
+      event_calendar_short_date_format: "%d/%m/%Y"
+      calendar_period_minicalendar_title: "%B %Y"
+      calendar_period_minicalendar_month: "%B"
+      calendar_month: "%B"
+      calendar_short_month: "%b"
+      calendar_day_name: "%A"
+      calendar_day_of_month: "%d"
+  refresh_calendar: "kalender vernieuwen"
+  edit_calendar: "kalender aanpassen"
+  delete_calendar: "kalender verwijderen"
+  really_delete_calendar: "Ben je zeker dat je de kalender %{name} permanent wilt verwijderen?"
+  calendar: Kalender
+  calendars: Kalenders
+  events: Events
+  locations: Locaties
+  defaults:
+    cancel: Annuleren
+    or: of
+    at: om
+    day: dag
+    week: week
+    month: maand
+    year: jaar
+    forever: voor altijd
+    until: tot
+    for: voor
+  calendar_admin:
+    defaults:
+      title: Kalender
+    index:
+      title: Kalenders
+      new: nieuwe kalender
+      name: Naam
+      url: URL (categorie/slug)
+      last_refresh: Laatste Refresh
+      auto_refresh: Automatisch refreshen?
+      yes: ja
+      no: nee
+      events: events
+    new:
+      title: Nieuwe kalender
+      header: Nieuwe Kalender
+    edit:
+      header: Kalender Aanpassen
+    show:
+      subscribe: Abonneren op deze kalender
+      address: adres
+      username: gebruikersnaam
+      password: paswoord
+      detail_text: Dit kan deel zijn van een 'master' kalender met verschillende sub-kalenders. In dat geval is er een ander adres waarmee je alle kalenders ineens kunt bereiken. Vraag na bij de administrator als je hierover twijfelt.
+      no_events: Geen Events
+    actions:
+      refresh: Kalender vernieuwen
+      edit: Kalender aanpassen
+      delete: Kalender verwijderen
+      confirm: Ben je zeker dat je deze kalender wilt verwijderen
+    form:
+      name: Naam
+      subscription_url: Abonneren-url (optioneel)
+      username: Gebruikersnaam
+      password: Paswoord
+      auto_refresh: Automatisch vernieuwen?
+      keywords: Sleutelwoorden
+      more: meer
+      description: Omschrijving
+      slug: Slug
+      category: Categorie
+  event_admin:
+    defaults:
+      title: Kalender
+    index:
+      title: Events
+      new: nieuw event
+      calendar: Kalender
+      time: Tijd
+      location: Locatie
+      keywords: Sleutelwoorden
+      modify: Aanpassen
+      no_events: Geen events om te tonen
+      show_all: (toon alle)
+      events: Events
+    new:
+      title: Nieuwe kalender
+      header: Nieuwe Kalender
+    edit:
+      header: Event Aanpassen
+    form:
+      new_location: een nieuwe locatie toevoegen
+      edit_location: deze locatie aanpassen
+      choose_location: Kies een locatie
+      description: Omschrijving
+      title: Titel
+      keywords: Sleutelwoorden
+      calendar: Kalender
+      start: Start-datum en -tijd
+      end: eind-datum en -tijd
+      event_url: Event url
+      repeat_note: "(dit is voor afzonderlijk herhaalde events. Voor events die meer dan 1 dag duren, dien je enkel een einddatum in te stellen.)"
+      calendar_note: "Dit is optioneel, maar kan gebruikt worden om eigen events in een geabonneerde kalender toe te voegen."
+      all_day: Duurt de hele dag?
+      repeats: Herhalingen
+      repeats_every: Herhaalt elke
+      many_time: zoveel keren
+    remove:
+      title: Event verwijderen
+      message: Ben je zeker dat je wil
+      submit: Verwijderen
+      warning: permanent verwijderen
+      event: het event
+  event_venues_admin:
+    defaults:
+      title: Kalender
+    index:
+      title: Locaties
+      place: Plaats
+      address: Adres
+      website: Website
+      modify: Aanpassen
+      no_places: "Er zijn nog geen locaties in het systeem. Je kunt er nu hier bijmaken, of wanneer je een event aanmaakt."
+      new: nieuwe locatie
+      event: event
+      remove: verwijderen
+    edit:
+      title: Locatie aanpassen
+      description: Aanpassingen die je hier doet worden gebruikt bij elk event dat op deze locatie plaats vindt.
+      update: Locatie bijwerken
+    new:
+      title: Locatie Toevoegen
+      text: Je kunt ook locaties toevoegen wanneer je een nieuw event aanmaakt.
+      create: Locatie aanmaken
+    form:
+      title: Locatie naam
+      choose: kies een bestaande locatie
+      choose_note: Deze details worden hergebruikt bij elk event dat op deze locatie plaats vindt.
+      choose_list: kies van de lijst
+      choose_before: Als je deze locatie reeds eerder gebruikte, 
+      choose_after: zodat je het kunt bijwerken voor alle events die er plaats vinden.
+      keywords: Sleutelwoorden
+      location_tag: Location tag
+      location_tag_note: This is used to recognise the venue in a calendar feed. It can be postcode, grid reference or any distinctive string.
+      address: Address or directions
+      postcode: Postcode or grid reference
+      postcode_note: This is only required if your address is unusual or you want these events to show on a map in a particular place.
+      url: Location url
+    remove:
+      title: Locatie verwijderen
+      no_events: Heeft geen events
+      event: event
+      confirm: Ben je zeker dat je wil 
+      warning: permanent verwijderen
+      the_location: de locatie
+      delete: Locatie verwijderen
+      associated: Het is verbonden met 
+      remain: wat in de kalender zal blijven staan met een blanco locatie
+  event_page:
+    more_pages: "%{start} tot %{end} van"
+    events: Events
+    continuing_events_title: Continuing events
+    runs_until: loopt tot
+    sorry_no_events: "Sorry: er zijn geen events"
+    sorry_no_upcoming_events: "Sorry: er zijn geen komende events"
+    stay_up_to_date: "blijf up-to-date"
+    rss: "RSS"
+    calendar_feed: "calendar feed"
+    or: of
+    at: om
+    summarize_period_one_day: "de ganse dag op %{date}"
+    summarize_period_all_day: "van %{from_date} tot %{to_date}"
+    summarize_period_within_day: "%{start_time} op %{date}"
+    summarize_period_within_day_with_end_time: "%{start_time} tot %{end_time} op %{date}"
+    summarize_period_spanning_days: "%{start_time} op %{date} tot %{end_time} op %{end_date}"
+    on_date:  "%{time} op %{date}"
+    from_date: "van %{date}"
+    all_day_on: "ganse dag op %{date}"
+    all_day: "ganse dag"
+    coming_up: "komend"
+    showing: Toon
+    in_calendars: "in %{calendars}"
+    description: "Create a viewer for calendar data. "
+    number_events:
+      one: 1 event
+      other:  "%{count} events"
+    continuing_events:
+      one: 1 continuing event
+      other:  "%{count} continuing events"
+  calendar_period:
+    description_day: "op %{day} %{monthname} %{year}"
+    onwards: "vanaf %{describe_start} "
+    until: "tot %{describe_finish}"
+    between: "tussen %{describe_start} en %{describe_finish}"
+    inspect: "%{describe_start} tot %{describe_finish}"
+    to_s: "%{distance_of_time_in_words} vanaf %{start}"
