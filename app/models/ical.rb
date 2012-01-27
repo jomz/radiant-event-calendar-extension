@@ -2,7 +2,7 @@ require 'rubygems'
 require 'net/http'
 require 'ri_cal'
 require 'date'
-require 'ftools'
+require 'fileutils'
 
 class Ical < ActiveRecord::Base
   include ActionView::Helpers::TextHelper
@@ -20,7 +20,7 @@ class Ical < ActiveRecord::Base
   end
 
   def retrieve_file
-    File.makedirs filepath
+    FileUtils.mkdir_p filepath
     begin
       uri = URI.parse(url)
       if authenticated?
