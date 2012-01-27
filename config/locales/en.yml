@@ -38,8 +38,6 @@ en:
     view_on_facebook: "view on facebook"
     attend_on_facebook: "attend on facebook"
     tweet_this: "Tweet this"
-    
-  # all this is going to be moved into the more conventional activerecord and event_calendar_extension namespaces when I get a chance.  
   refresh_calendar: "refresh calendar"
   edit_calendar: "edit calendar"
   delete_calendar: "delete calendar"
@@ -232,5 +230,3 @@ en:
     between: "between %{describe_start} and %{describe_finish}"
     inspect: "%{describe_start} to %{describe_finish}"
     to_s: "%{distance_of_time_in_words} from %{start}"
-
-

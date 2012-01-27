@@ -1,5 +1,11 @@
 ---
 nl:
+  config:
+    event_calendar:
+      path: Kalender url
+      layout: Layout
+      refresh_interval: Inschrijvingen vernieuwen na
+      cache_duration: Cache houdbaarheid
   time:
     formats:
       calendar_period_description_week: "in week %U of %Y"
@@ -26,6 +32,11 @@ nl:
       calendar_short_month: "%b"
       calendar_day_name: "%A"
       calendar_day_of_month: "%d"
+  event_calendar_extension:
+    download_event: "Event downloaden"
+    view_on_facebook: "bekijken op facebook"
+    attend_on_facebook: "bijwonen op facebook"
+    tweet_this: "Tweeten"
   refresh_calendar: "kalender vernieuwen"
   edit_calendar: "kalender aanpassen"
   delete_calendar: "kalender verwijderen"
@@ -34,6 +45,7 @@ nl:
   calendars: Kalenders
   events: Events
   locations: Locaties
+  event_venues: Locaties
   defaults:
     cancel: Annuleren
     or: of
