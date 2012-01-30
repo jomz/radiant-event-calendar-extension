@@ -14,11 +14,11 @@ class Admin::IcalsController < Admin::ResourceController
   end 
   
   def refresh
-    ical = Ical.find(params[:id])
+    @ical = Ical.find(params[:id])
     if response = ical.refresh
-      flash[:notice] = ical.calendar.name + " calendar refreshed. #{response}"
+      flash[:notice] = @ical.calendar.name + " calendar refreshed. #{response}"
     else
-      flash[:notice] = "Error parsing " + ical.calendar.name + " calendar from iCal subscription."
+      flash[:notice] = "Error parsing " + @ical.calendar.name + " calendar from iCal subscription."
     end
     redirect_to :back
   end
