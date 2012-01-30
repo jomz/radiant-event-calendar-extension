@@ -48,7 +48,7 @@ class Ical < ActiveRecord::Base
         self.last_refresh_count = 0
         count = { :created => 0, :updated => 0, :deleted => 0 }
         uuids_seen = []
-        File.open(thisfile, "rb") do |file|
+        File.open(thisfile, "r") do |file|
           components = RiCal.parse(file)
           cal = components.first
           cal.events.each do |cal_event|
