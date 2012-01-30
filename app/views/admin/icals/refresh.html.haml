@@ -2,9 +2,9 @@
   Refresh Subscriptions
   %div{:style => "border-bottom: dotted 1px rgb(100,100,100); padding: 10px;"}
     %strong
-      = @ical.category.to_s.capitalize
+      = @ical.calendar.category.to_s.capitalize
       > 
-      = @ical.name.to_s.capitalize
+      = @ical.calendar.name.to_s.capitalize
     %br
-    = @ical.events.count
+    = @ical.calendar.events.count
     events parsed and brought into database.
