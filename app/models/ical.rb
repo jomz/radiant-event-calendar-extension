@@ -32,7 +32,7 @@ class Ical < ActiveRecord::Base
       else
         response = Net::HTTP.get_response(uri)
       end
-      File.open(filename, "w") do |file|
+      File.open(filename, "wb") do |file|
         file << response.body
       end
     rescue => error
@@ -48,7 +48,7 @@ class Ical < ActiveRecord::Base
         self.last_refresh_count = 0
         count = { :created => 0, :updated => 0, :deleted => 0 }
         uuids_seen = []
-        File.open(thisfile, "r") do |file|
+        File.open(thisfile, "rb") do |file|
           components = RiCal.parse(file)
           cal = components.first
           cal.events.each do |cal_event|
