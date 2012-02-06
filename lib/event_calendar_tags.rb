@@ -68,7 +68,7 @@ module EventCalendarTags
       tag.locals.calendar = event.calendar
       result << tag.expand
     end
-    result
+    result.join
   end
 
   desc %{ 
@@ -292,7 +292,7 @@ module EventCalendarTags
       <pre><code><r:calendar:#{attribute} /></code></pre> 
     }
     tag "calendar:#{attribute}" do |tag|
-      tag.locals.calendar.send(attribute)
+      CGI::escapeHTML tag.locals.calendar.send(attribute).to_s
     end
   end
 
@@ -327,7 +327,7 @@ module EventCalendarTags
       tag.locals.event = event
       result << tag.expand
     end
-    result
+    result.join ''
   end
 
   desc %{ 
@@ -397,7 +397,7 @@ module EventCalendarTags
       <pre><code><r:event:#{attribute} /></code></pre> 
     }
     tag "event:#{attribute}" do |tag|
-      tag.locals.event.send(attribute)
+      CGI::escapeHTML tag.locals.event.send(attribute).to_s
     end
 
     desc %{ 
@@ -618,7 +618,7 @@ module EventCalendarTags
     result << %{<br /><span class="location">#{tag.render('event:location')}</span>} if tag.locals.event.location
     result << %{<br /><span class="description">#{tag.render('event:description')}</span>} if tag.locals.event.description
     result << %{</li>}
-    result
+    result.join ''
   end
 
   desc %{ 
@@ -878,7 +878,7 @@ module EventCalendarTags
       cal << "</td></tr>"
     end
     cal << %{</tbody></table>}
-    cal
+    cal.join ''
   end
     
   desc %{ 
@@ -944,7 +944,7 @@ module EventCalendarTags
       cal << "</tr>" if day == day.end_of_week
     end
     cal << %{</tbody></table>}
-    cal
+    cal.join
   end
   
 private
