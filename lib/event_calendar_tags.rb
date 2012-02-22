@@ -292,7 +292,7 @@ module EventCalendarTags
       <pre><code><r:calendar:#{attribute} /></code></pre> 
     }
     tag "calendar:#{attribute}" do |tag|
-      CGI::escapeHTML tag.locals.calendar.send(attribute).to_s
+      tag.locals.calendar.send(attribute).to_s
     end
   end
 
@@ -397,7 +397,7 @@ module EventCalendarTags
       <pre><code><r:event:#{attribute} /></code></pre> 
     }
     tag "event:#{attribute}" do |tag|
-      CGI::escapeHTML tag.locals.event.send(attribute).to_s
+      tag.locals.event.send(attribute).to_s
     end
 
     desc %{ 
